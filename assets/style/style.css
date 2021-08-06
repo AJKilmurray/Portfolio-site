@@ -1,0 +1,124 @@
+*,
+::before,
+::after,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.font-primary {
+  font-family: Poppins !important;
+}
+
+.font-secondary {
+  font-family: Montserrat !important;
+}
+
+.primary-dark {
+  background-color: #1E1E26 !important;
+}
+
+.secondary-dark {
+  background-color: #292931 !important;
+}
+
+.text-highlight {
+  color: #00FFFB !important;
+}
+
+.text-main {
+  color: #fff !important;
+}
+
+.default-shadow {
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) !important;
+}
+
+.navbar {
+  background: rgba(30, 30, 38, 0.5);
+}
+
+.navbar .navbar-toggler-icon {
+  fill: white !important;
+}
+
+.navbar .navbar-toggler {
+  color: white;
+}
+
+.navbar .navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-brand:hover {
+  color: #fff !important;
+}
+
+.navbar .navbar-brand .nav-logo {
+  width: 75px;
+}
+
+.navbar .navbar-brand .brand-title {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+
+.navbar .nav-link {
+  font-size: 1.5rem;
+  font-family: Montserrat !important;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin-right: 2rem;
+}
+
+.navbar .nav-link:hover {
+  color: #00FFFB !important;
+}
+
+body #landing {
+  min-height: 600px;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../images/landing/axpo-cover.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../images/landing/axpo-cover.jpeg");
+  background-repeat: no-repeat;
+  -webkit-box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 0 50vw rgba(0, 0, 0, 0.5);
+  background-size: cover;
+}
+
+body #landing .landing-head {
+  font-size: 75px;
+}
+
+body #landing .landing-para {
+  font-size: 32px;
+}
+
+body #landing #description {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#todo-app-img {
+  width: 90px;
+}
+
+#discord-icon {
+  width: 90px;
+}
+/*# sourceMappingURL=style.css.map */

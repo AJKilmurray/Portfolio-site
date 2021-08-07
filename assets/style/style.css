@@ -15,7 +15,7 @@ body {
 }
 
 .primary-dark {
-  background-color: #1E1E26 !important;
+  background-color: #1e1e26 !important;
 }
 
 .secondary-dark {
@@ -23,7 +23,7 @@ body {
 }
 
 .text-highlight {
-  color: #00FFFB !important;
+  color: #00fffb !important;
 }
 
 .text-main {
@@ -60,7 +60,7 @@ body {
 }
 
 .navbar .navbar-brand .nav-logo {
-  width: 75px;
+  width: 55px;
 }
 
 .navbar .navbar-brand .brand-title {
@@ -76,10 +76,15 @@ body {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   margin-right: 2rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem 1rem !important;
 }
 
 .navbar .nav-link:hover {
-  color: #00FFFB !important;
+  color: #00fffb !important;
+  background-color: rgba(30, 30, 38, 0.4);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 body #landing {

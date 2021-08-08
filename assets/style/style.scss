@@ -108,7 +108,7 @@ h6 {
 
   .nav-link {
     font-size: 1.5rem;
-    font-family: $secondary-font !important;
+    font-family: $primary-font !important;
     transition: $transition;
     margin-right: 2rem;
     border-radius: 0.25rem;
@@ -182,7 +182,7 @@ body {
         width: fit-content;
 
         .about-header {
-          background:#19191980;
+          background: rgba(30, 30, 38, 0.6);
           padding: 1rem 0;
           border-radius: 1.5rem 1.5rem 0 0;
   
@@ -262,6 +262,10 @@ body {
             width: 32px;
           }
         }
+      }
+
+      .projects-error {
+        text-align: center;
       }
 
       .project-card {
@@ -346,7 +350,7 @@ body {
 }
 
 .icons-container {
-  margin-right: 40px;
+  margin-right: 24px;
 
   .social-link {
     margin-left: 1rem;
@@ -357,7 +361,7 @@ body {
   }
 
   .first-icon {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
 

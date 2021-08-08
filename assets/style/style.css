@@ -96,7 +96,7 @@ h6 {
 
 .navbar .nav-link {
   font-size: 1.5rem;
-  font-family: Raleway !important;
+  font-family: Poppins !important;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   margin-right: 2rem;
@@ -188,7 +188,7 @@ body main #about .about-card {
 }
 
 body main #about .about-card .about-header {
-  background: #19191980;
+  background: rgba(30, 30, 38, 0.6);
   padding: 1rem 0;
   border-radius: 1.5rem 1.5rem 0 0;
 }
@@ -269,6 +269,10 @@ body main #projects .project-filter .project-buttons-container .filter-btn:activ
 
 body main #projects .project-filter .project-buttons-container .filter-img {
   width: 32px;
+}
+
+body main #projects .projects-error {
+  text-align: center;
 }
 
 body main #projects .project-card {
@@ -356,7 +360,7 @@ body #footer .footer-text {
 }
 
 .icons-container {
-  margin-right: 40px;
+  margin-right: 24px;
 }
 
 .icons-container .social-link {
@@ -368,7 +372,7 @@ body #footer .footer-text {
 }
 
 .icons-container .first-icon {
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 @media screen and (max-width: 900px) {

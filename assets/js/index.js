@@ -3,6 +3,8 @@ import config from "./config.js";
 const projectsContainer = document.getElementById("project-list");
 const filters = document.querySelectorAll(".filter-btn");
 
+window.addEventListener("DOMContentLoaded", () => formatProjects(config.projects));
+
 filters.forEach((btn) => btn.addEventListener("click", filterProjects));
 
 function filterProjects(event) {
@@ -21,7 +23,7 @@ function filterProjects(event) {
 function formatProjects(projects) {
 	const format = projects
 		.map((project) => {
-			const icons = project.tech.forEach((tech) => `<img src="assets/images/tech-icons/${tech}-icon.png" />`);
+			const icons = project.tech.map((tech) => `<img src="assets/images/tech-icons/${tech}-icon.png" />`).join("");
 
 			return `<div class="col-md-4 project-card">
       <article class="project-content">

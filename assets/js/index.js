@@ -3,29 +3,31 @@ import config from "./config.js";
 const projectsContainer = document.getElementById("project-list");
 const filters = document.querySelectorAll(".filter-btn");
 
-window.addEventListener("DOMContentLoaded", () => formatProjects(config.projects));
+formatProjects(config.projects);
 
 filters.forEach((btn) => btn.addEventListener("click", filterProjects));
 
+// Filter projects based on the tech category clicked
 function filterProjects(event) {
-	const keyword = event.currentTarget.dataset.tech;
+  const keyword = event.currentTarget.dataset.tech;
 
-	const results = [];
-	const filter = config.projects.forEach((project) => {
-		for (let tech of project.tech) {
-			if (tech === keyword) results.push(project);
-		}
-	});
+  const results = [];
+  config.projects.forEach((project) => {
+    for (let tech of project.tech) {
+      if (tech === keyword) results.push(project);
+    }
+  });
 
-	formatProjects(results);
+  formatProjects(results);
 }
 
+// Parse Projects into HTML formatted strings
 function formatProjects(projects) {
-	const format = projects
-		.map((project) => {
-			const icons = project.tech.map((tech) => `<img src="assets/images/tech-icons/${tech}-icon.png" />`).join("");
+  const format = projects
+    .map((project) => {
+      const icons = project.tech.map((tech) => `<img src="assets/images/tech-icons/${tech}-icon.png" />`).join("");
 
-			return `<div class="col-md-4 project-card">
+      return `<div class="col-md-4 project-card">
       <article class="project-content">
         <h1 class="font-primary">${project.title}</h1>
         <h2 class="font-primary project-date">${project.date}</h2>
@@ -43,29 +45,29 @@ function formatProjects(projects) {
             </div>
           </div>
         </article>
-        <a href="${project.site}" class="btn first-link project-link"><span class="text-highlight">View</span> Site</a>
-        <a href="${project.repo} " class="btn project-link"><span class="text-highlight">View</span> Code</a>
+        <a href="${project.site}" target="_blank" class="btn first-link project-link"><span class="text-highlight">View</span> Site</a>
+        <a href="${project.repo}" target="_blank" class="btn project-link"><span class="text-highlight">View</span> Code</a>
       </article>
     </div>`;
-		})
-		.join("");
+    })
+    .join("");
 
-	displayProjects(format);
+  displayProjects(format);
 }
 
 function displayProjects(projects) {
-	while (projectsContainer.firstChild) {
-		projectsContainer.removeChild(projectsContainer.lastChild);
-	}
+  while (projectsContainer.firstChild) {
+    projectsContainer.removeChild(projectsContainer.lastChild);
+  }
 
-	if (!projects) {
-		noProjectsFound();
-		return;
-	}
+  if (!projects) {
+    noProjectsFound();
+    return;
+  }
 
-	projectsContainer.insertAdjacentHTML("afterbegin", projects);
+  projectsContainer.insertAdjacentHTML("afterbegin", projects);
 }
 
 function noProjectsFound() {
-	projectsContainer.insertAdjacentHTML("afterbegin", `<h3 class="projects-error font-primary">${config.error}</h3>`);
+  projectsContainer.insertAdjacentHTML("afterbegin", `<h3 class="projects-error font-primary">${config.error}</h3>`);
 }

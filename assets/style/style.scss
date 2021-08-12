@@ -185,7 +185,7 @@ body {
           background: rgba(30, 30, 38, 0.6);
           padding: 1rem 0;
           border-radius: 1.5rem 1.5rem 0 0;
-  
+
           .about-title {
             font-size: 2.5rem;
             text-align: center;
@@ -199,7 +199,6 @@ body {
           box-shadow: $shadow;
 
           .about-article {
-
             h3 {
               font-size: 2rem;
               margin-bottom: 0.5rem;
@@ -220,7 +219,7 @@ body {
     #projects {
       margin-top: 9rem;
       margin-bottom: 4rem;
-      
+
       .projects-container {
         row-gap: 4rem;
       }
@@ -318,7 +317,7 @@ body {
 
             &:hover,
             &:focus {
-              transform: scale(1.05);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             }
 
             &:active {
@@ -382,6 +381,18 @@ body {
 
   .landing-subtitle {
     font-size: 18px !important;
+  }
+
+  .about-title {
+    font-size: 32px !important;
+  }
+
+  .about-content h3 {
+    font-size: 26px !important;
+  }
+
+  .about-content p {
+    font-size: 0.95rem !important;
   }
 }
 

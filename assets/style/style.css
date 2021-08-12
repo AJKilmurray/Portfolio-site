@@ -332,8 +332,8 @@ body main #projects .project-card .project-content .project-link {
 }
 
 body main #projects .project-card .project-content .project-link:hover, body main #projects .project-card .project-content .project-link:focus {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 body main #projects .project-card .project-content .project-link:active {
@@ -390,6 +390,15 @@ body #footer .footer-text {
   }
   .landing-subtitle {
     font-size: 18px !important;
+  }
+  .about-title {
+    font-size: 32px !important;
+  }
+  .about-content h3 {
+    font-size: 26px !important;
+  }
+  .about-content p {
+    font-size: 0.95rem !important;
   }
 }
 

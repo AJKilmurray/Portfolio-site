@@ -9,7 +9,7 @@ const config = {
 			tech: ["javascript", "html", "css"],
 			site: "https://ajkilmurray.github.io/Filmflix/",
 			repo: "https://github.com/AJKilmurray/Filmflix",
-			img: "filmflix.PNG",
+			img: "filmflix.JPEG",
 			alt: "Filmflix",
 		},
 		{
@@ -21,7 +21,7 @@ const config = {
 			tech: ["javascript", "html", "css"],
 			site: "https://ajkilmurray.github.io/freelancer-catalog/",
 			repo: "https://github.com/AJKilmurray/freelancer-catalog",
-			img: "freelancer-catalog.PNG",
+			img: "freelancer-catalog.JPEG",
 			alt: "Freelancer Catalog",
 		},
 		{
@@ -33,7 +33,7 @@ const config = {
 			tech: ["react", "javascript", "css"],
 			site: "https://luxurio.netlify.app/",
 			repo: "https://github.com/AJKilmurray/luxurio",
-			img: "luxurio.PNG",
+			img: "luxurio.JPEG",
 			alt: "Luxurio",
 		},
 	],

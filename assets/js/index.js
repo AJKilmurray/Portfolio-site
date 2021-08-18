@@ -36,7 +36,7 @@ function formatProjects(projects = config.projects) {
         <h1 class="font-primary">${project.title}</h1>
         <h2 class="font-primary project-date">${project.date}</h2>
         <figure class="project-img-figure">
-          <img class="project-img" src="assets/images/projects/${project.img}" alt="${project.alt}"  />
+          <img class="project-img" src="/assets/images/projects/${project.img}" alt="${project.alt}"  />
         </figure>
         <article class="project-description">
           <h3 class="font-primary mb-3"><span class="text-highlight">Project</span> Description</h3>

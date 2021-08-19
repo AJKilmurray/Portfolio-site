@@ -29,7 +29,7 @@ function filterProjects(event) {
 function formatProjects(projects = config.projects) {
 	const format = projects
 		.map((project) => {
-			const icons = project.tech.map((tech) => `<img src="assets/images/tech-icons/${tech}-icon.JPEG" />`).join("");
+			const icons = project.tech.map((tech) => `<img src="assets/images/tech-icons/${tech}-icon.webp" />`).join("");
 
 			return `<div class="col-md-4 project-card">
       <article class="project-content">

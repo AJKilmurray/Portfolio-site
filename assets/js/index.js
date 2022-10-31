@@ -13,30 +13,30 @@ filters.forEach((btn) => btn.addEventListener("click", filterProjects));
 
 // Filter projects based on the tech category clicked
 function filterProjects(event) {
-	const keyword = event.currentTarget.dataset.tech;
+  const keyword = event.currentTarget.dataset.tech;
 
-	const results = [];
-	config.projects.forEach((project) => {
-		for (let tech of project.tech) {
-			if (tech === keyword) results.push(project);
-		}
-	});
+  const results = [];
+  config.projects.forEach((project) => {
+    for (let tech of project.tech) {
+      if (tech === keyword) results.push(project);
+    }
+  });
 
-	formatProjects(results);
+  formatProjects(results);
 }
 
 // Parse Projects into HTML formatted strings
 function formatProjects(projects = config.projects) {
-	const format = projects
-		.map((project) => {
-			const icons = project.tech.map((tech) => `<img src="assets/images/tech-icons/${tech}-icon.webp" />`).join("");
+  const format = projects
+    .map((project) => {
+      const icons = project.tech.map((tech) => `<img src="assets/images/tech-icons/${tech}-icon.webp" />`).join("");
 
-			return `<div class="col-md-4 project-card">
+      return `<div class="col-md-4 project-card">
       <article class="project-content">
         <h1 class="font-primary">${project.title}</h1>
         <h2 class="font-primary project-date">${project.date}</h2>
         <figure class="project-img-figure">
-          <img class="project-img" src="/assets/images/projects/${project.img}" alt="${project.alt}"  />
+          <img class="project-img" src="assets/images/projects/${project.img}" alt="${project.alt}"  />
         </figure>
         <article class="project-description">
           <h3 class="font-primary mb-3"><span class="text-highlight">Project</span> Description</h3>
@@ -53,36 +53,36 @@ function formatProjects(projects = config.projects) {
         <a href="${project.repo}" target="_blank" class="btn project-link"><span class="text-highlight">View</span> Code</a>
       </article>
     </div>`;
-		})
-		.join("");
+    })
+    .join("");
 
-	displayProjects(format);
+  displayProjects(format);
 }
 
 function displayProjects(projects) {
-	while (projectsContainer.firstChild) {
-		projectsContainer.removeChild(projectsContainer.lastChild);
-	}
+  while (projectsContainer.firstChild) {
+    projectsContainer.removeChild(projectsContainer.lastChild);
+  }
 
-	if (!projects) {
-		noProjectsFound();
-		return;
-	}
+  if (!projects) {
+    noProjectsFound();
+    return;
+  }
 
-	projectsContainer.insertAdjacentHTML("afterbegin", projects);
+  projectsContainer.insertAdjacentHTML("afterbegin", projects);
 }
 
 function noProjectsFound() {
-	projectsContainer.insertAdjacentHTML("afterbegin", `<h3 class="projects-error font-primary">${config.error}</h3>`);
+  projectsContainer.insertAdjacentHTML("afterbegin", `<h3 class="projects-error font-primary">${config.error}</h3>`);
 }
 
 // Navbar Toggler
 function toggleNavColor(event) {
-	const status = event.currentTarget.ariaExpanded === "true" ? true : false;
+  const status = event.currentTarget.ariaExpanded === "true" ? true : false;
 
-	if (status) {
-		navIcon.classList.add("active-toggle");
-	} else if (!status) {
-		navIcon.classList.remove("active-toggle");
-	}
+  if (status) {
+    navIcon.classList.add("active-toggle");
+  } else if (!status) {
+    navIcon.classList.remove("active-toggle");
+  }
 }
